@@ -11,7 +11,7 @@
   overflow: hidden;
   align-items: center;
   text-align: center;
-  background: linear-gradient(to left, rgba(39, 39, 39, 0.4), rgba(39, 39, 39, 0.3)), url(../image/main.webp) center top;
+  background: linear-gradient(to left, rgba(39, 39, 39, 0.7), rgba(39, 39, 39, 0.3)), url(../image/model-1.jpg) center top;
   background-size: cover;
 }
 .home_name {
@@ -133,7 +133,7 @@
 .about-bio_image {
   height: 50vh;
   width: 100%;
-  background: linear-gradient(to right, rgba(39, 39, 39, 0.4), rgba(39, 39, 39, 0.3)), url(../image/model-1.jpg) center top;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.7), rgba(39, 39, 39, 0.3)), url(../image/model-1.jpg) center top;
   background-size: cover;
   display: flex;
   align-items: center;
@@ -170,6 +170,86 @@
   margin: 0.3rem 0;
 }
 .about .social_icons {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  transform: rotate(90deg) translate(-8rem, -8rem);
+}
+
+.projects {
+  padding-bottom: 2rem;
+}
+.projects-bio_image {
+  height: 30vh;
+  width: 100%;
+  background: linear-gradient(to right, rgba(39, 39, 39, 0.7), rgba(39, 39, 39, 0.3)), url(../image/model-1.jpg) center top;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.projects .text-secondary {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.projects_items {
+  width: 60vw;
+  margin: 2rem auto 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+.projects_item {
+  position: relative;
+  border-bottom: 5px solid #ff652f;
+  overflow: hidden;
+  cursor: pointer;
+}
+.projects_item img {
+  width: 100%;
+}
+.projects_item::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background: #ff652f;
+  transition: all 0.5s ease-in-out;
+}
+.projects_item:hover::after {
+  top: 0;
+  opacity: 0.5;
+}
+.projects_item:hover .projects-btn {
+  opacity: 1;
+}
+.projects-btns {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  text-align: center;
+}
+.projects-btn {
+  opacity: 0;
+  color: #000;
+  transition: all 0.5s ease-in-out;
+}
+.projects-btn:hover {
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+.projects .social_icons {
   display: flex;
   flex-direction: column;
 }
